@@ -20,6 +20,6 @@ describe("String#anagrams") do
   end
   it("recognizes if two sentences are anagrams or antigrams as well, ignoring spaces and punctuation.") do
     string = String.new
-    expect(string.anagrams("The Morse Code", "Here come dots!")).to(eq("These sentences are anagrams!"))
+    expect(string.anagrams("The Morse Code", "Here come dots!")).to(eq("These words are anagrams."))
   end
 end
