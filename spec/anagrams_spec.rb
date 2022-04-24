@@ -14,4 +14,7 @@ describe("String#anagrams") do
       string = String.new
       expect(string.anagrams("Ruby", "grf")).to(eq("You need to input actual words!"))
   end
+  it("recognizes if two words are antigrams.") do
+    string = String.new
+    expect(string.anagrams("hi", "bye")).to(eq("These words have no letter matches and are antigrams"))
 end
