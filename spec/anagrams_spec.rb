@@ -17,4 +17,5 @@ describe("String#anagrams") do
   it("recognizes if two words are antigrams.") do
     string = String.new
     expect(string.anagrams("hi", "bye")).to(eq("These words have no letter matches and are antigrams"))
+  end
 end
