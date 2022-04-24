@@ -3,7 +3,9 @@ class String
     word1_compare = word1.downcase.split('').sort
     word2_compare = word2.downcase.split('').sort
 
-    if word1_compare === word2_compare
+    if (word1_compare.none? {|x| x.match(/[aeiou]/i)}) || (word2_compare.none? {|x| x.match(/[aeiou]/i)})
+      "You need to input actual words!"
+    elsif word1_compare === word2_compare
       "These words are anagrams."
     end
   end
