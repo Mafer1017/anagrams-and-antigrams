@@ -10,4 +10,8 @@ describe("String#anagrams") do
     string = String.new
     expect(string.anagrams("Ruby", "Bury")).to(eq("These words are anagrams."))
   end
+  it("recognizes if an input is not a real word.") do
+      string = String.new
+      expect(string.anagrams("Ruby", "grf")).to(eq("You need to input actual words!"))
+  end
 end
