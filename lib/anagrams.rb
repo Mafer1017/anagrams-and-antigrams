@@ -5,6 +5,8 @@ class String
 
     if (word1_compare.none? {|x| x.match(/[aeiou]/i)}) || (word2_compare.none? {|x| x.match(/[aeiou]/i)})
       "You need to input actual words!"
+    elsif word1_compare.any? {|word1_compare| word2_compare.include?(word1_compare)} === false
+      "These words have no letter matches and are antigrams"
     elsif word1_compare === word2_compare
       "These words are anagrams."
     end
