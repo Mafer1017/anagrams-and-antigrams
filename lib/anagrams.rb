@@ -1,7 +1,7 @@
 class String
   def anagrams (word1, word2)
-    word1_compare = word1.downcase.split('').sort
-    word2_compare = word2.downcase.split('').sort
+    word1_compare = word1.downcase.gsub(/[^a-z]/, "").split('').sort
+    word2_compare = word2.downcase.gsub(/[^a-z]/, "").split('').sort
 
     if (word1_compare.none? {|x| x.match(/[aeiou]/i)}) || (word2_compare.none? {|x| x.match(/[aeiou]/i)})
       "You need to input actual words!"
